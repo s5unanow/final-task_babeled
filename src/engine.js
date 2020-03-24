@@ -322,6 +322,6 @@ let DOMSearchForm = document.querySelector(".header-nav__search");
 let DOMSearchFormText = document.querySelector(".search__input");
 DOMSearchForm.addEventListener("submit", event => {
   let searchMessage = DOMSearchFormText.value;
-  alert(searchMessage);
+  if (searchMessage !== "") alert(searchMessage);
 });
 

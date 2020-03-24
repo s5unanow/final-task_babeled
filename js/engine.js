@@ -469,5 +469,5 @@ var DOMSearchForm = document.querySelector(".header-nav__search");
 var DOMSearchFormText = document.querySelector(".search__input");
 DOMSearchForm.addEventListener("submit", function (event) {
   var searchMessage = DOMSearchFormText.value;
-  alert(searchMessage);
+  if (searchMessage !== "") alert(searchMessage);
 });

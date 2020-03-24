@@ -27,7 +27,6 @@ function setFilter(DOMCategory, filterValue) {
   DOMSetFilter.className = "filter__category--set";
 }
 
-
 /* mobile-tablet filter */
 
 const DOMMobileFilterCategories = document.querySelectorAll(".filter-mobile__category");
@@ -69,7 +68,6 @@ function getDOMStringParam(DOMCategory) {
   let category = DOMClassNames.slice(DOMClassNames.indexOf(" category") + 11);
   let DOMFilterStringParams = document.querySelectorAll(".filter__params li");
   for (let i = 0; i < DOMFilterStringParams.length; i++) {
-    console.log(DOMFilterStringParams[i].className.indexOf(category));
     if (DOMFilterStringParams[i].className.indexOf(category) >= 0) {
       result = DOMFilterStringParams[i];
     }

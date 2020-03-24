@@ -79,8 +79,6 @@ function getDOMStringParam(DOMCategory) {
   var DOMFilterStringParams = document.querySelectorAll(".filter__params li");
 
   for (var _i3 = 0; _i3 < DOMFilterStringParams.length; _i3++) {
-    console.log(DOMFilterStringParams[_i3].className.indexOf(category));
-
     if (DOMFilterStringParams[_i3].className.indexOf(category) >= 0) {
       result = DOMFilterStringParams[_i3];
     }

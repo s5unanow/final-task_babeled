@@ -1,0 +1,54 @@
+.item__img {
+  position: relative;
+}
+
+.item__view-item--hover {
+  position: absolute;
+  display: none;
+  width: 42vw;
+  max-width: 250px;
+  height: 100%;
+  background: rgba(0, 0, 0, .5);
+  z-index: 1000;
+}
+
+.item__img:hover  .item__view-item--hover{
+  display: block;
+}
+
+.item__view-item--text {
+  position: absolute;
+  top: 38%;
+  left: 6%;
+  z-index: 3000;
+  width: 90%;
+  font-family: "OpenSans-Bold", sans-serif;
+  font-size: 20px;
+  color: #f14a58;
+  opacity: 1;
+}
+
+@media (min-width: 768px) {
+  .item__name {
+    max-width: 200px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .item__view-item--hover {
+    width: 26.8vw;
+  }
+}
+
+@media (min-width: 1024px) {
+  .item__view-item--hover {
+    width: 242px;
+  }
+}
+
+@media (min-width: 1300px) {
+  .item__view-item--hover {
+    width: 100%;
+  }
+}
+

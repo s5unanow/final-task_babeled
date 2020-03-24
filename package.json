@@ -1,0 +1,18 @@
+{
+  "name": "final-task",
+  "version": "1.0.0",
+  "description": "Implemented features:\r - base functionality;\r - photos switcher (item detail page);\r - shopping bag;\r - \"best offer\";\r - filter visual functionality;\r - dynamic content rendering;",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.0"
+  }
+}

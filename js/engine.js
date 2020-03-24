@@ -438,6 +438,17 @@ if (currentPage.indexOf("Start") >= 0) {
 
 if (currentPage.indexOf("Catalog") >= 0) {
   layoutBuilder.buildDOMCatalog(filteredCatalogItems);
+  /* Catalog - show extra items on click "show more" button */
+
+  var DOMShowMoreButton = document.querySelector(".catalog-main__btn");
+  var DOMCatalogItems = document.querySelectorAll(".catalog-main__items a");
+  DOMShowMoreButton.addEventListener("click", function (event) {
+    event.preventDefault();
+
+    for (var i = 0; i < DOMCatalogItems.length; i++) {
+      DOMCatalogItems[i].style.display = "block";
+    }
+  });
 }
 
 if (currentPage.indexOf("Item") >= 0) {
@@ -451,3 +462,12 @@ if (currentPage.indexOf("Shopping") >= 0) {
   layoutBuilder.buildDOMBagPage();
   dispatcher.addBagListeners();
 }
+/* Search form sumbission */
+
+
+var DOMSearchForm = document.querySelector(".header-nav__search");
+var DOMSearchFormText = document.querySelector(".search__input");
+DOMSearchForm.addEventListener("submit", function (event) {
+  var searchMessage = DOMSearchFormText.value;
+  alert(searchMessage);
+});

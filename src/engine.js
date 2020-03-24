@@ -294,6 +294,16 @@ if (currentPage.indexOf("Start") >= 0) {
 }
 if (currentPage.indexOf("Catalog") >= 0) {
   layoutBuilder.buildDOMCatalog(filteredCatalogItems);
+
+  /* Catalog - show extra items on click "show more" button */
+  let DOMShowMoreButton = document.querySelector(".catalog-main__btn");
+  let DOMCatalogItems = document.querySelectorAll(".catalog-main__items a");
+  DOMShowMoreButton.addEventListener("click", event => {
+    event.preventDefault();
+    for (let i = 0; i < DOMCatalogItems.length; i++) {
+      DOMCatalogItems[i].style.display = "block";
+    }
+  });
 }
 if (currentPage.indexOf("Item") >= 0) {
   let buyBtn = document.querySelector(".item-buy__btn");
@@ -305,3 +315,13 @@ if (currentPage.indexOf("Shopping") >= 0) {
   layoutBuilder.buildDOMBagPage();
   dispatcher.addBagListeners();
 }
+
+/* Search form sumbission */
+
+let DOMSearchForm = document.querySelector(".header-nav__search");
+let DOMSearchFormText = document.querySelector(".search__input");
+DOMSearchForm.addEventListener("submit", event => {
+  let searchMessage = DOMSearchFormText.value;
+  alert(searchMessage);
+});
+
